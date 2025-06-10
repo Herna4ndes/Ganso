@@ -1,4 +1,5 @@
 #Ganso
+
 Payload do ganso para trollar os seus amigos. O goose (ganso) é um arquivo.exe que faz aparecer um ganso irritante na tela do PC/Notebook de quem o executar. Basta usar um badusb no computador do seu amigo que o payload faz o restante do trabalho de baixar e executar o arquivo .txt. O Goose é inofensivo e não representa risco ao computador. Também disponibilizei o arquivo em .ps1 que executa o download direto do diretório via poweshell. Dentro deste diretório você encontrará o arquivo do Goose 0.31v em ZIP e também encontrará os payloads em .txt e os arquivos em .ps1.
 
                                                     Passo a Passo
